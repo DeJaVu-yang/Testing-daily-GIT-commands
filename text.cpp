@@ -62,8 +62,10 @@ void findMinDiffNodes(BSTree root, int K, int& minDiff, std::vector<int>& result
 // 中序遍历输出（验证BST正确性）
 void inOrder(BSTree root) {
     if (root == nullptr) return;
-    inOrder(root->left);
+    inOrder(root->left);//递归遍历左子树
     std::cout << root->data << " ";
+
+
     inOrder(root->right);
 }
 
