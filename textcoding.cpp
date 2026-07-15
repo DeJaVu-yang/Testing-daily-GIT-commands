@@ -2,14 +2,25 @@
 #include <vector>
 #include <stdio.h>
 #include <string>
+#include <algorithm>
 int main() {
-std::vector<int> result = {1, 2, 3, 4, 5};
+   std::vector<int> v;
+   v.push_back(1);
+   v.push_back(2);
+   v.push_back(3);
+   v.push_back(3);
+   v.push_back(25);
+   for (size_t i = 0; i < v.size(); i++) {
+    std::cout<<v[i]<<" ";
+   }
+ auto it = find(v.begin(), v.end(), 3);
+ std::cout<<"find: "<<*it<<std::endl;
+ v.erase(it);
+ std::cout<<"after erase: ";
 
-// 遍历 vector 的标准写法
-for (size_t i = 0; i < result.size(); i++) {
-    std::cout << result[i] << " ";  // 输出：1 2 3 4 5  
+ for (size_t i = 0; i < v.size(); i++) {
+    std::cout<<v[i]<<" ";
+ }
+ std::cout<<std::endl;
 
-}
-std::cout << std::endl;
-std::cout << "total number of elements in result is:" << result.size() << std::endl;
 }

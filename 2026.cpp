@@ -70,7 +70,8 @@ void inOrder(BSTree root) {
 }
 
 int main() {
-    // 构建二叉搜索树
+    // 构建二叉搜索树]
+    std::cout << "INT_MAX: " << INT_MAX << std:: endl; // 输出 2147483647
     BSTree root = nullptr;
     int values[] = {5, 3, 8, 2, 4, 7, 9, 5};  // 包含重复值5
     int n = sizeof(values) / sizeof(values[0]);
@@ -86,7 +87,7 @@ int main() {
     // 测试查找
     int K;
     std::cout << "请输入整数K：";
-    std::cin >> K;
+      std::cin >> K;
     
     int minDiff = INT_MAX;
     std::vector<int> result;
